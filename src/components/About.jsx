@@ -1,4 +1,4 @@
-const EXPERIENCE_START = new Date(2022, 6, 1); // July 1, 2022
+const EXPERIENCE_START = new Date(2021, 4, 1); // May 1, 2021
 
 function getExperienceYearsText() {
   const now = new Date();
@@ -18,25 +18,23 @@ export default function About() {
         <div className="about-grid">
           <div className="about-content">
             <p className="about-text">
-              Member of Technical Staff at Salesforce with {experienceYearsText} of experience developing
-              scalable, secure, and cloud-native software systems. I architect RESTful web services,
-              implement microservices, and optimize cloud-based enterprise solutions—building
-              systems that reduced failures by 40% and accelerated feature releases by 30%.
+              Member of Technical Staff at Salesforce with {experienceYearsText} of experience designing
+              scalable backend systems, distributed services, and cloud-native APIs. I focus on
+              high-throughput platform engineering, reducing latency, and building reliable systems
+              that support global enterprise workloads.
             </p>
             <p className="about-text">
-              Skilled in Java, Python, and C++, with expertise in object-oriented design, RBAC,
-              and distributed systems. Previously at Oracle; I deliver high-performance applications
-              and enjoy mentoring engineers and driving best practices.
+              At Salesforce, I built components for High-Scale Flow and the e360 email rendering pipeline,
+              reducing pipeline latency by 25% and supporting 50K+ concurrent renders daily.
+              Earlier at Oracle, I led API and microservices modernization initiatives that reduced
+              system failures by 40% and improved response times by 20%.
             </p>
             <div className="about-leadership">
               <h4 className="about-leadership-title">Leadership &amp; volunteering</h4>
               <p className="about-text">
-                <strong>Technical Affairs Secretary</strong>, Students&apos; Affairs Council, NIT Calicut —
-                advocated for 3000+ students, drove academic reforms and technical initiatives, and
-                directed Tathva (national techfest) for 50,000+ attendees. <strong>Assistant Secretary</strong>, Club
-                Mathematica — managed Infinitum (logical reasoning quiz) for 22,000+ school students,
-                mentored 35+ juniors. Delivered hands-on seminars on Flutter and ReactJS for 150+ students;
-                developed educational apps for Thinktac.
+                I enjoy mentoring engineers, improving development workflows, and contributing to
+                high-ownership teams. Across roles, I have helped standardize engineering practices,
+                coached 5+ engineers, and improved team delivery velocity by 15%.
               </p>
             </div>
           </div>
@@ -44,7 +42,7 @@ export default function About() {
             <pre><code>{`const avinash = {
   role: "Member of Technical Staff",
   company: "Salesforce",
-  stack: ["Java", "Python", "React", "Spring Boot"],
+  stack: ["Java", "Spring Boot", "Python", "Kubernetes"],
   ship: true,
 };`}</code></pre>
           </div>

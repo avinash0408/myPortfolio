@@ -1,17 +1,21 @@
 const PROJECTS = [
   {
-    title: 'Viflix',
-    description: 'A scalable streaming platform with Firebase authentication, modular React components, and dynamic content rendering. Cut page load time by 35%.',
-    tech: ['ReactJS', 'Firebase', 'TypeScript', 'REST APIs'],
-    link: '#',
-    repo: '#',
+    title: 'Cloud-Native URL Shortener',
+    description: 'Built a high-throughput URL shortening service with Redis caching, rate limiting, and analytics; horizontally scalable to 10K+ req/sec with Docker Compose.',
+    tech: ['Java', 'Spring Boot', 'Redis', 'PostgreSQL', 'Docker'],
+    repo: 'https://github.com/avinash0408/urlshortener',
   },
   {
-    title: 'Vi-Weather',
-    description: 'Real-time weather forecast app using REST APIs. Responsive UI with seamless location-based data updates.',
-    tech: ['ReactJS', 'REST APIs', 'TypeScript'],
-    link: '#',
-    repo: '#',
+    title: 'Real-Time Chat Platform',
+    description: 'Designed a scalable real-time messaging platform with WebSockets, JWT authentication, and message persistence, supporting 500+ concurrent connections per instance.',
+    tech: ['Java', 'Spring Boot', 'WebSockets', 'React', 'MongoDB', 'Docker'],
+    repo: 'https://github.com/avinash0408/chat',
+  },
+  {
+    title: 'Distributed Task Scheduler',
+    description: 'Implemented a fault-tolerant distributed scheduler with retry policies, dead-letter queues, and Prometheus/Grafana monitoring for cron and event-driven jobs.',
+    tech: ['Python', 'FastAPI', 'Celery', 'RabbitMQ', 'Kubernetes', 'Prometheus'],
+    repo: 'https://github.com/avinash0408/task-scheduler',
   },
 ];
 
@@ -23,9 +27,12 @@ export default function Projects() {
         <h2 className="section-title">Project highlights</h2>
         <div className="project-grid">
           {PROJECTS.map((project, i) => (
-            <article
+            <a
               key={project.title}
               className="project-card"
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="project-card-inner">
@@ -37,15 +44,10 @@ export default function Projects() {
                   ))}
                 </ul>
                 <div className="project-links">
-                  <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    Live
-                  </a>
-                  <a href={project.repo} className="project-link" target="_blank" rel="noopener noreferrer">
-                    Code
-                  </a>
+                  <span className="project-link">Open Repository ↗</span>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 const COMMANDS = [
-  { cmd: 'npm run dev', output: '> portfolio@0.0.0 dev\n  Vite v5 — ready in 42ms\n  Local: http://localhost:5173/' },
-  { cmd: 'git status', output: 'On branch main\nnothing to commit, working tree clean' },
-  { cmd: 'ls -la', output: 'src/  public/  package.json  vite.config.js' },
+  { cmd: 'whoami', output: 'Avinash Samudrala\nMember of Technical Staff @ Salesforce' },
+  { cmd: 'experience --years', output: '4+ years\nCloud-native backend systems\nMicroservices · Distributed systems' },
+  { cmd: 'skills --top', output: 'Java · Spring Boot · Python · Kubernetes · REST APIs' },
 ];
 
 export default function TerminalBlock() {
@@ -12,7 +12,7 @@ export default function TerminalBlock() {
   const [showOutput, setShowOutput] = useState(false);
 
   useEffect(() => {
-    const { cmd, output } = COMMANDS[index];
+    const { cmd } = COMMANDS[index];
     let i = 0;
     const typeCmd = setInterval(() => {
       if (i <= cmd.length) {

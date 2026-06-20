@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 
 const LINES = [
   'const role = "Member of Technical Staff";',
-  'company: "Salesforce" · stack: ["Java", "React", "Spring Boot"]',
-  '// Scalable APIs · Microservices · Clean code',
+  'company: "Salesforce" · stack: ["Java", "Spring Boot", "Python"]',
+  '// 4+ years · Microservices · Distributed Systems',
 ];
 
 const TYPING_SPEED = 70;

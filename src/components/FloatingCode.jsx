@@ -13,6 +13,11 @@ const SNIPPETS = [
   ['console', '.', 'log', '(', "'hello'", ')'],
 ];
 
+function seededValue(seed) {
+  const value = Math.sin(seed) * 10000;
+  return value - Math.floor(value);
+}
+
 function CodeSnippet({ tokens, delay, duration, left }) {
   return (
     <div
@@ -37,9 +42,9 @@ export default function FloatingCode() {
     () =>
       SNIPPETS.map((tokens, i) => ({
         tokens,
-        delay: Math.random() * 8,
-        duration: 18 + Math.random() * 12,
-        left: Math.random() * 85,
+        delay: seededValue(i + 1) * 8,
+        duration: 18 + seededValue(i + 11) * 12,
+        left: seededValue(i + 21) * 85,
       })),
     []
   );

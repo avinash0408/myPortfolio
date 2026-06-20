@@ -469,6 +469,46 @@
   color: var(--accent-cyan);
 }
 
+.resume-menu {
+  position: relative;
+}
+
+.resume-menu > .btn {
+  cursor: pointer;
+}
+
+.resume-menu-list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+.resume-menu-item {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.resume-menu-item:last-child {
+  border-bottom: none;
+}
+
+.resume-menu-item:hover {
+  color: var(--accent-cyan);
+  background: rgba(84, 194, 255, 0.08);
+}
+
 /* ========== Terminal section ========== */
 .terminal-section {
   position: relative;
@@ -768,6 +808,8 @@
 }
 
 .project-card {
+  display: block;
+  text-decoration: none;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -820,7 +862,6 @@
 .project-link {
   font-size: 0.9rem;
   color: var(--accent-green);
-  text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -911,6 +952,21 @@
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .resume-menu {
+    width: 100%;
+  }
+
+  .resume-menu > .btn {
+    width: 100%;
+  }
+
+  .resume-menu-list {
+    left: 0;
+    right: auto;
+    width: 100%;
+    min-width: 0;
   }
 
   .typing-effect {
