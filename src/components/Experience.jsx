@@ -5,9 +5,9 @@ const JOBS = [
     location: 'Hyderabad, India',
     period: 'Jan 2026 – Present',
     bullets: [
-      'Engineered core components for High-Scale Flow automation and e360 email rendering, delivering personalized templating services handling 50K+ concurrent renders daily.',
-      'Built Octopus, a scalable data-fetch and caching framework for multilingual CMS content, reducing average content retrieval time by 35%.',
-      'Delivered Content Variants for in-app translation and locale-driven rendering across Salesforce Marketing channels, supporting 45+ locales.',
+      'Delivered Content Variants (in-app translation) enabling locale-driven content rendering via profile-based language selection across Salesforce Marketing channels, supporting 45+ locales for global customers.',
+      'Built an in-browser HTML code editor enabling marketing customers to hand-author and fully customize landing pages and web forms with raw HTML; shipped syntax highlighting, in-editor code search, dynamic personalization tokens with inline editing, custom form embedding within landing pages, and pre-publish validation to catch errors before deployment.',
+      'Developed Google reCAPTCHA (bot/spam protection) and Google Analytics integrations for customer-facing marketing websites, including REST APIs for installation and removal, backend services for configuration and lifecycle management, and a reusable rendering hook that automatically injects required scripts into published pages.',
     ],
   },
   {

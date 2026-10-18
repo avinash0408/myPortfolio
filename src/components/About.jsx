@@ -24,8 +24,9 @@ export default function About() {
               that support global enterprise workloads.
             </p>
             <p className="about-text">
-              At Salesforce, I built components for High-Scale Flow and the e360 email rendering pipeline,
-              reducing pipeline latency by 25% and supporting 50K+ concurrent renders daily.
+              At Salesforce, I delivered Content Variants for locale-driven rendering across 45+ locales,
+              built an in-browser HTML code editor for landing pages and web forms, and shipped
+              Google reCAPTCHA and Google Analytics integrations for customer-facing marketing sites.
               Earlier at Oracle, I led API and microservices modernization initiatives that reduced
               system failures by 40% and improved response times by 20%.
             </p>

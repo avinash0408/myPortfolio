@@ -208,6 +208,9 @@
 
 .hero-row .hero {
   width: 100%;
+  /* keep the resume dropdown above the terminal block when stacked (mobile/tablet) */
+  position: relative;
+  z-index: 2;
 }
 
 .hero-row .terminal-section {
@@ -963,10 +966,19 @@
   }
 
   .resume-menu-list {
-    left: 0;
-    right: auto;
+    /* render in normal flow on mobile so items are not covered by the terminal block */
+    position: static;
+    margin-top: 0.5rem;
     width: 100%;
     min-width: 0;
+    box-shadow: none;
+  }
+
+  .resume-menu-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
   }
 
   .typing-effect {

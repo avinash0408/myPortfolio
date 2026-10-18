@@ -13,10 +13,9 @@ import Contact from './components/Contact'
 import './App.css'
 
 const RESUME_OPTIONS = [
-  { label: 'Indian Resume', href: '/resume-indian.pdf' },
+  { label: 'India Resume', href: '/resume-india.pdf' },
   { label: 'Global Resume', href: '/resume-global.pdf' },
-  { label: 'EU Nordic Resume', href: '/resume-eu-nordic.pdf' },
-  { label: 'EU Resume', href: '/resume-eu.pdf' },
+  { label: 'Europe Resume', href: '/resume-europe.pdf' },
 ];
 
 function App() {
@@ -38,11 +37,12 @@ function App() {
       }
     }
 
-    document.addEventListener('mousedown', handlePointerDown)
+    // pointerdown covers mouse + touch (mousedown alone is unreliable on mobile)
+    document.addEventListener('pointerdown', handlePointerDown)
     document.addEventListener('keydown', handleEscape)
 
     return () => {
-      document.removeEventListener('mousedown', handlePointerDown)
+      document.removeEventListener('pointerdown', handlePointerDown)
       document.removeEventListener('keydown', handleEscape)
     }
   }, [resumeMenuOpen])
@@ -75,19 +75,19 @@ function App() {
                 </button>
                 {resumeMenuOpen && (
                   <div className="resume-menu-list" role="menu" aria-label="Resume versions">
-                  {RESUME_OPTIONS.map((resume) => (
-                    <a
-                      key={resume.label}
-                      href={resume.href}
-                      className="resume-menu-item"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      role="menuitem"
-                      onClick={() => setResumeMenuOpen(false)}
-                    >
-                      {resume.label}
-                    </a>
-                  ))}
+                    {RESUME_OPTIONS.map((resume) => (
+                      <a
+                        key={resume.label}
+                        href={resume.href}
+                        className="resume-menu-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        role="menuitem"
+                        onClick={() => setResumeMenuOpen(false)}
+                      >
+                        {resume.label}
+                      </a>
+                    ))}
                   </div>
                 )}
               </div>
